@@ -1,0 +1,226 @@
+### Exercises
+
+1. Write a function that takes the callback function as a parameter and triggers it after 1 second.
+// setTimeout(() => console.log("funkcia"), 1000);
+2. Write a function that will accept two numbers and two callback functions as an argument. If the first number is greater than the second, call the first callback, instead of calling the second callback function.
+// function compare(a, b, greater, smaller) {
+//   setTimeout(() => {
+//     if (a > b) {
+//       greater();
+//     } else {
+//       smaller();
+//     }
+//   }),
+//     1000;
+// }
+
+// function greater1() {
+//   console.log("პირველი რცხვი მეტია მეორეზე");
+// }
+
+// function greater2() {
+//   console.log("პირველი რცხვი ნაკლებია მეორეზე");
+// }
+
+// compare(1, 2, greater1, greater2);
+
+// console.log("in process...");
+3. Write a function that takes an array, a number, and a callback function as parameters. After calling the callback function, the number in the array must be broken and the updated array returned. Hint: When calling a callback function, use an array and a number that must be buried in the array as arguments.
+
+// function push1(array, num, cBack) {
+//   cBack(array, num);
+//   return array;
+// }
+
+// arr = [1, 2, 3, 4];
+// num = 1;
+// function newArray(arr, num) {
+//   arr.push(num);
+//   return arr;
+// }
+
+// console.log(push1(arr, num, newArray));
+
+4. Create a frommis that will reset after 2 seconds and display a success message.
+
+// const promise = new Promise((resolve) => {
+//   setTimeout(() => resolve("success"), 2000);
+// });
+// promise.then((message) => console.log(message));
+
+5. Create a Fromis that will be irresistible or receded after 3 seconds. To reserve if the user is of legal age and to register - if not.
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     let userAge = 16;
+//     if (userAge >= 18) {
+//       resolve("srulwlovania");
+//     } else {
+//       reject("arasrulwlovania");
+//     }
+//   }, 3000);
+// });
+
+// promise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((mess) => {
+//     console.log(mess);
+//   });
+
+//   console.log("in progress")
+6. Create a Frommis that will reset in 50% of cases and settle in the remaining 50%. Copy both options with the and catch.
+// const promise = new Promise((resolve, reject) => {
+//   let num = Math.floor(Math.random() * 100);
+//   setTimeout(() => {
+//     if (num > 50) {
+//       resolve("resolved");
+//     } else {
+//       reject("rejected");
+//     }
+//   }, 2000);
+// });
+
+// promise
+//   .then((message) => {
+//     console.log(message);
+//   })
+//   .catch((mess) => {
+//     console.log(mess);
+//   });
+
+// console.log("in process...");
+7. Create a Promise Chain (with at least 3 fromm) where each will be reset in 1 second and display different success messages.
+// const promise = new Promise((resolve) => {
+//   x = 5;
+//   setTimeout(() => {
+//     resolve("pirveli");
+//   }, 1000);
+// })
+//   .then((message) => {
+//     console.log(message);
+//     message = "meore";
+//     return message;
+//   })
+//   .then((message) => {
+//     console.log(message);
+//     message = "mesame";
+//     return message;
+//   })
+//   .then((message) => console.log(message));
+
+// 2
+// const promise = new Promise((resolve) => {
+//     setTimeout(() => {
+//         resolve("pirveli warmateba");
+//     }, 1000);
+// }).then((message) => {
+//     console.log(message);
+//         return new Promise((resolve) => {
+//             setTimeout(() => {
+//             resolve("meore warmateba");}, 1000)
+// });
+// }).then((mess) => {
+//     console.log(mess);
+//         return new Promise((resolve) => {
+//             setTimeout(() => {
+//                 resolve("mesame warmateba");
+//             }, 1000)
+//         });
+// }).then((me) => console.log(me));
+
+8. Create two fromms. The first should multiply the number and the second should multiply the specified number by 2. Use promise chining.
+// const promise = new Promise((resolve) => {
+//   setTimeout(() => {
+//     resolve(5);
+//   }, 1000);
+// }).then((num) => {
+//   console.log(num);
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(num * 2);
+//     }, 1000);
+//   }).then((num) => {
+//     console.log(num);
+//   });
+// });
+
+// 2
+// const promise = new Promise((resolve) => resolve(7))
+//   .then((num) => {
+//     console.log(num);
+//     return num * 2;
+//   })
+//   .then((num) => console.log(num));
+
+9. Write a program that will ask the user a positive number and count to that number. Each number should be consigned at 1 second intervals.
+// let num = Number(prompt("sheiyvanet ricxvi: "));
+// let i = 0;
+// function count() {
+//   console.log(i);
+//   i++;
+
+//   if (i < num) {
+//     setTimeout(count, 1000);
+//   }
+// }
+
+// count();
+
+10. Write a program that will ask the user about their Github user and take their information from the Githab API. API link - https://api.github.com/users/[username], For example: https://api.github.com/users/temuritsutskiridze. First use the when/catch and then async/await.
+
+// const username = prompt("sheiyvanet githubis username: ");
+
+// fetch(`https://api.github.com/users/${username}`)
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log("monacemebi: ", data);
+//     console.log("saxeli: ", data.name);
+//     console.log("magaliti: ", data.id);
+//   })
+//   .catch((error) => {
+//     console.log("error", error);
+//   });
+
+// // 2
+
+// async function fetchuser() {
+//   const username = prompt("sheiyvanet username: ");
+//   const response = await fetch(`https://api.github.com/users/${username}`);
+//   const data = await response.json();
+//   console.log("monacemebi: ", data);
+// }
+
+// fetchuser();
+11. Write a program that brings two different information from the API and print it when you get both
+// async function twoFetch() {
+//   const response1 = await fetch(`https://api.github.com/users/tchitanava1/followers`);
+//   const response2 = await fetch(`https://api.github.com/users/tchitanava1`);
+
+//   const userinfo = await response2.json();
+//   const followerinfo = await response1.json();
+
+//   console.log(userinfo);
+//   console.log(followerinfo);
+// }
+
+
+// twoFetch();
+
+12. Write a program that will take three different data from the API and print the one it gets the fastest.
+async function threeFetch() {
+  const promise1 = await fetch(`https://api.github.com/users/tchitanava1/node_id`).then((res) => res.json());
+  const promise2 = await fetch(`https://api.github.com/users/tchitanava1`).then((res) => res.json());
+  const promise3 = await fetch(`https://api.github.com/users/tchitanava1/avatar_url`).then((res) => res.json());
+
+  const fastestData = await Promise.race([promise1, promise2, promise3]);
+
+  console.log(fastestData);
+
+
+}
+
+threeFetch()
+
