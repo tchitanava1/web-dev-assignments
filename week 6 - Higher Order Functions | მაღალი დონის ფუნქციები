@@ -293,7 +293,7 @@
 
 // console.log(nameCount(["nika", "nika", "nika", "oto", "oto", "oto", "nini"]));
 
-// ეს თითქოს გავიგე რამდენიმეჯერ გავაკეთე მაგრამ ბოლომდე ვერ ვიგებ მაინც
+
 
 // // 9.რიცხვების მასივის გათვალისწინებით,დავალაგოთ მასივი ზრდადობით.
 
@@ -406,49 +406,7 @@
 // console.log(capitalizeWords("adandali dandali chemi okros shandali"));
 
 // 21.დაწერეთ ფუნქცია, რომელიც მიიღებს ობიექტების მასივს და თვისების სახელს და აბრუნებს ამ თვისების უნიკალური მნიშვნელობების მასივს ყველა ობიექტიდან.
-// const users = [
-//   { name: "ნიკა", age: 20 },
-//   { name: "ნინი", age: 24 },
-//   { name: "ნინი", age: 24 },
-//   { name: "ოთო", age: 2 },
-//   { name: "თემო", age: 20 },
-// ];
 
-// const uniqueFun = (users) => users.filter((a, b) => a.name !== b.name);
-// console.log(uniqueFun(users));
-
-// function unique(users) {
-//   let unique = [];
-//   for (let i = 0; i < users.length; i++) {
-//     if (users[i].name !== users[i].name) {
-//       unique.push(users[i]);
-//     }
-//   }
-//   return unique;
-// }
-
-// console.log(
-//   unique([
-//     { name: "ნიკა", age: 20 },
-//     { name: "ნინი", age: 24 },
-//     { name: "ნინი", age: 24 },
-//     { name: "ოთო", age: 2 },
-//     { name: "თემო", age: 20 },
-//   ])
-// );  ამ ამოცანაზეც მჭირდება მითითებები არ გამომდის
-
-// const uniqueFun = (users) => new Set(users.map((users) => users.name));
-// console.log(
-//   uniqueFun([
-//     { name: "ნიკა", age: 20 },
-//     { name: "ნინი", age: 24 },
-//     { name: "ნინი", age: 24 },
-//     { name: "ოთო", age: 2 },
-//     { name: "თემო", age: 20 },
-//   ])
-// );
-
-// 2
 // function unique(array, property) {
 //   let result = [];
 //   for (let users of array) {
@@ -472,7 +430,7 @@
 //   )
 // );
 
-//ვსო გავიგე მაგრამ წინა არასწორი ამოცანები დავტოვე მაინც
+
 // 22.დაწერეთ ფუნქცია, რომელიც იღებს სტრიქონს შეყვანად და აბრუნებს ჭეშმარიტს, თუ ის არის პანგრამა (შეიცავს ანბანის ყველა ასოს ერთხელ მაინც), ცრუ სხვა შემთხვევაში.
 
 // function isPangram(string) {
@@ -558,3 +516,4 @@
 //   }, 0);
 
 // console.log(sumarray(array));
+
