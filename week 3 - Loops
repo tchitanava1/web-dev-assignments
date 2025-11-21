@@ -39,6 +39,8 @@ console.log(sum);
 
 */
 
+
+
 // 5. დაწერეთ პროგრამა, რომელიც გამოთვლის კენტი რიცხვების ჯამს 1-დან 100-მდე და დაბეჭდავს შედეგს.
 
 /*
@@ -111,22 +113,15 @@ for (let i = 1; i < 10; i++){
 }
 */
 // 10. გამოიყენეთ while ლუპი, რათა დათვალოთ სიმბოლოების რაოდენობა სტრიქონში "AlgoUni" და დაბეჭდოთ შედეგი.
-/*
-let str = "Algouni";
-let i = 0;
-let count = 0;
-while(str[i]){
-    i++;
-    count++
-}
-console.log(count);
-*/
-// 11. გამოიყენეთ do...while ციკლი „დიახ“-ის დასაბეჭდად, თუ რიცხვი 5-ზე ნაკლებია და „არა“, თუ ის აღწევს ან აღემატება 5-ს. რიცხვების შუალედადაიღეთ -10 და 10.
-let i;
+
+
+
+// 11. გამოიყენეთ do...while ციკლი „დიახ“-ის დასაბეჭდად, თუ რიცხვი 5-ზე ნაკლებია და „არა“, თუ ის აღწევს ან აღემატება 5-ს. რიცხვების შუალედად აიღეთ -10 და 10.
+/* let i;
 do {
   i = Number(prompt("enter the number: "));
   if (i <= -10 || i >= 10) {
-    console.log("WRONG INPUT");
+    console.log("WRONG INPUT  ");
     break;
   } else if (i >= 5) {
     console.log("no");
@@ -136,12 +131,27 @@ do {
     break;
   }
 } while (true);
-
-// 12. გამოიყენეთ for loop 20-დან 10-მდე რიცხვების დასაბეჭდად.
-/*
-for (let i = 20; i > 10; i--) {
-  console.log(i);
-}
 */
+// 12. გამოიყენეთ for loop 20-დან 10-მდე რიცხვების დასაბეჭდად.
 
-15;
+// for (let i = 20; i > 10; i--){
+//     console.log(i);
+// }
+
+// 13
+// for (let i = "#" ; i.length <= 7; i+="#" ){ 
+    // console.log(i);
+// }
+
+// 14. Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead
+/*
+for (let i = 1; i < 100; i++){
+    if (i % 3 === 0){
+        console.log("Fizz");
+    } else if ( i % 5 === 0 && i % 3 !== 0){
+        console.log("Buzz");
+    } else {
+        console.log(i)
+    }
+
+*/
