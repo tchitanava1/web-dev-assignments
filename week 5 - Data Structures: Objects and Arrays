@@ -192,6 +192,7 @@
 //   city: "paris",
 // };
 // console.log(person.name);
-// person.job = "stripper";
+// person.job = "software developer";
 // console.log(person);
-// 18. დაამატეთ ახალი თვისება სახელწოდებით job, Person ობიექტს და მიანიჭეთ მას მნიშვნელობა. დაბეჭდეთ განახლებული ობიექტი.
+
+
