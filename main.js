@@ -1,0 +1,147 @@
+// 1. დაწერეთ პროგრამა რომელიც კონსოლში გამოპრინტავს რიცხვებს 0 დან 10-ის ჩათვლით. გამოიყენეთ while და for ციკლები.
+/*
+for (let num = 0; num <= 10; num++){
+  console.log(num);
+}
+*/
+/*
+let num = 0;
+while (num <= 10){
+  console.log(num);
+  num++;
+}
+*/
+// 2. დაწერეთ პროგრამა, რომელიც ბეჭდავს ლუწ რიცხვებს 1-დან 20-მდე for loop-ის გამოყენებით.
+/*
+for (let even = 1; even <= 20; even++){
+  if (even % 2 === 0){
+    console.log(even);
+  }
+}
+*/
+// 3. დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს შეიყვანოს რიცხვი და დაბეჭდოს "Hello!" იმდენჯერ რამდენსაც უდრის ეს შეყვანილი რიცხვი.
+
+/*
+let num = Number(prompt("enter the number: "));
+for (let i = 0; i < num; i++){
+    console.log("Hello!");
+}
+*/
+
+// 4. დაწერეთ პროგრამა, რომელიც გამოთვლის რიცხვების ჯამს 1-დან 100-მდე for loop-ის გამოყენებით და დაბეჭდავს შედეგს.
+
+/*
+let sum = 0;
+for (let i = 1; i < 100; i++){
+    sum = sum + i;
+}
+console.log(sum);
+
+*/
+
+// 5. დაწერეთ პროგრამა, რომელიც გამოთვლის კენტი რიცხვების ჯამს 1-დან 100-მდე და დაბეჭდავს შედეგს.
+
+/*
+let sum = 0;
+let i = 0;
+while (i < 100){
+    i++
+    if (i % 2 === 1){
+    sum = sum + i; 
+    }
+}
+console.log(sum);
+
+*/
+
+// 6. დაწერეთ პროგრამა, რომელიც სთხოვს მომხმარებელს გამოიცნოს საიდუმლო რიცხვი 1-დან 10-მდე. განაგრძეთ გამოცნობის მოთხოვნა, სანამ ისინი სწორად გამოიცნობენ, while loop-ის და do while-ის გამოყენებით.
+
+/*
+let randNum = Math.floor(Math.random() * 10);
+//console.log(randNum);
+let i = Number(prompt("enter the number: "));
+while (true) {
+    if (i !== randNum){
+        i = Number(prompt("try again: "));
+    } else {
+        console.log("you got it!");
+        break;
+    }
+}
+*/
+
+/*
+let i;
+let randNum = Math.floor(Math.random() * 10);
+console.log(randNum);
+do{
+    i = Number(prompt("enter the number: "));
+    if (i !== randNum){
+        console.log("try again:")
+    }
+} while (i !== randNum);
+console.log("you got it!")
+
+*/
+
+// 7. გამოიყენეთ do...while ციკლი 10-დან 1-მდე დასათვლელად.
+
+/*
+let i = 10;
+do{ 
+    console.log(i);
+    i--;
+}while(i > 0);
+*/
+
+// 8. გამოიყენეთ for loop 1-დან 30-მდე 3-ის ჯერადების დასაბეჭდად.
+/*
+for (let i = 1; i < 30; i++){
+    if (i % 3 !== 0){
+        continue;
+    }
+console.log(i);
+}
+*/
+
+// 9. გამოიყენეთ for loop 4-ის გამრავლების ცხრილის დასაბეჭდად (4 × 1-დან 4 × 10-მდე).
+/*
+for (let i = 1; i < 10; i++){
+    console.log("4 * " + i + " = " + `${4 * i}`)
+}
+*/
+// 10. გამოიყენეთ while ლუპი, რათა დათვალოთ სიმბოლოების რაოდენობა სტრიქონში "AlgoUni" და დაბეჭდოთ შედეგი.
+/*
+let str = "Algouni";
+let i = 0;
+let count = 0;
+while(str[i]){
+    i++;
+    count++
+}
+console.log(count);
+*/
+// 11. გამოიყენეთ do...while ციკლი „დიახ“-ის დასაბეჭდად, თუ რიცხვი 5-ზე ნაკლებია და „არა“, თუ ის აღწევს ან აღემატება 5-ს. რიცხვების შუალედადაიღეთ -10 და 10.
+let i;
+do {
+  i = Number(prompt("enter the number: "));
+  if (i <= -10 || i >= 10) {
+    console.log("WRONG INPUT");
+    break;
+  } else if (i >= 5) {
+    console.log("no");
+    break;
+  } else {
+    console.log("yes");
+    break;
+  }
+} while (true);
+
+// 12. გამოიყენეთ for loop 20-დან 10-მდე რიცხვების დასაბეჭდად.
+/*
+for (let i = 20; i > 10; i--) {
+  console.log(i);
+}
+*/
+
+15;
